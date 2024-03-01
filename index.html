@@ -1,21 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI hub</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
+    <script
+      src="https://kit.fontawesome.com/2596ecf14d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="container mx-auto">
     <header>
-
+      <h1 class="text-4xl font-semibold mt-10 text-center">AI Universe Hub</h1>
+      <div class="flex justify-center">
+        <button class="btn bg-pink-500 text-white mt-6 font-bold">
+          sort by date
+        </button>
+      </div>
     </header>
     <main>
+      <!-- cards -->
+      <section>
+        <div id="cards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <!-- <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Shoes!</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                      </div>
+                    </div>
+                  </div> -->
+        </div>
+        <div class="mt-10 flex justify-center">
+          <button  class="btn btn-error px-6">See all</button>
+        </div>
+      </section>
 
+      <section>
+        <!-- You can open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="showADetails.showModal()">open modal</button> -->
+        <dialog id="showADetails" class="modal">
+          <div class="modal-box w-11/12 max-w-5xl">
+            <form method="dialog">
+              <button
+                class="btn btn-sm btn-circle bg-pink-600 btn-ghost absolute right-2 top-2"
+              >
+                ✕
+              </button>
+            </form>
+            <div id="modal-details">
+               
+            </div>
+          </div>
+        </dialog>
+
+        
+      </section>
     </main>
 
-
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
